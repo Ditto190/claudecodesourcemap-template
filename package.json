@@ -1,0 +1,39 @@
+{
+  "name": "@anthropic-ai/claude-code",
+  "version": "0.2.8",
+  "description": "Claude Code - Agentic coding tool for your terminal",
+  "type": "module",
+  "bin": {
+    "claude": "./cli.mjs"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "preinstall": "node scripts/check-node-version.mjs",
+    "start": "node cli.mjs",
+    "lint": "node --check scripts/check-node-version.mjs && node --check scripts/validate-install.mjs",
+    "test": "node scripts/check-node-version.mjs && node scripts/validate-install.mjs",
+    "validate": "node scripts/validate-install.mjs"
+  },
+  "files": [
+    "cli.mjs",
+    "yoga.wasm",
+    "vendor/",
+    "src/"
+  ],
+  "keywords": [
+    "claude",
+    "ai",
+    "coding",
+    "terminal",
+    "anthropic"
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "dependencies": {
+    "@anthropic-ai/sdk": "file:vendor/sdk"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
